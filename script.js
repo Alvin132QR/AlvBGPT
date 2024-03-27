@@ -3,7 +3,7 @@ const outputDiv = document.getElementById("output");
 const runButton = document.getElementById("run-button");
 runButton.addEventListener("click", async function() {
     const gpt = await askGPT(text);
-    const par = document.createElement("asy").textContent = `${gpt.result}`
+    const par = document.createElement("asy").textContent = gpt.result
     outputDiv.innerHTML = par
 });
 
