@@ -33,15 +33,15 @@
 <body>
   <textarea id="quest" placeholder="Type your Question Here"></textarea>
   <button id="run-button">Enter</button>
-  <div id="hasil"></div>
+  <div id="output"></div>
 
   <script>
-    const codeInput = document.getElementById("code");
+    const input = document.getElementById("quest").value;
     const outputDiv = document.getElementById("output");
     const runButton = document.getElementById("run-button");
-    runButton.addEventListener("click", function() {
-      const code = codeInput.value;
-      outputDiv.innerHTML = code;
+    runButton.addEventListener("click", async function() {
+      var res = await askGPT(input);
+      outputDiv.innerHTML = res;
     });
   </script>
 
