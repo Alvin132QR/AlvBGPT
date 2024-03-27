@@ -1,9 +1,12 @@
 const text = document.getElementById("quest").value;
     const outputDiv = document.getElementById("output");
     const runButton = document.getElementById("run-button");
+    var par = document.createElementById("Par");
     runButton.addEventListener("click", async function() {
       var res = await askGPT(text);
-      outputDiv.innerHTML = `{res}`;
+      par.textContent = `result: ${res} `
+      outputDiv.innerHTML = par
+        
     });
 
 async function askGPT(text) {
