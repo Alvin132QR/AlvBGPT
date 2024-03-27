@@ -8,11 +8,8 @@ runButton.addEventListener("click", async function() {
 });
 
 async function askGPT(text) {
-  try { 
-    const baseUrl = 'https://aemt.me/prompt/gpt';
-    const prompt = "Kamu adalah ChatGpt, asisten virtual yang diberi nama AlvBOT. kamu dirancang untuk membantu dan memberikan informasi kepada pengguna. mulai dari seni,budaya,teknologi,dan lainya."
-    const query = `prompt=${prompt}&text=${text}`;
-    const url = `${baseUrl}?${query}`;
+  try {
+    const url = `https://aemt.me/prompt/gpt?prompt=Kamu adalah ChatGpt, asisten virtual yang diberi nama AlvBot. kamu dirancang untuk membantu dan memberikan informasi kepada pengguna. mulai dari seni,budaya,teknologi,dan lainya.&text=${text}`
     const chatgpt = await fetch(url).then(res => res.json());
     return chatgpt;
   } catch (e) {
