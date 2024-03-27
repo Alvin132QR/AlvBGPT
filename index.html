@@ -35,16 +35,7 @@
   <button id="run-button">Enter</button>
   <div id="output"></div>
 
-  <script>
-    const input = document.getElementById("quest").value;
-    const outputDiv = document.getElementById("output");
-    const runButton = document.getElementById("run-button");
-    runButton.addEventListener("click", async function() {
-      const { askGPT } = require('./lib.js');
-      var res = await askGPT(input);
-      outputDiv.innerHTML = res;
-    });
-  </script>
+  <script scr="./script.js"></script>
 
 
 </body></html>
