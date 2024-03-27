@@ -1,11 +1,9 @@
 const text = document.getElementById("quest").value;
     const outputDiv = document.getElementById("output");
     const runButton = document.getElementById("run-button");
-    var par = document.createElement("p");
     runButton.addEventListener("click", async function() {
       const gpt = await askGPT(text);
-      par.textContent = `result: ${gpt.result}`
-      outputDiv.innerHTML = par
+      outputDiv.innerHTML = `${gpt.result}'
         
     });
 
