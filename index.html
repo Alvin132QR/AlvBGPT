@@ -40,7 +40,7 @@
     const outputDiv = document.getElementById("output");
     const runButton = document.getElementById("run-button");
     runButton.addEventListener("click", async function() {
-      const { askGPT } = require ./lib.js;
+      const { askGPT } = require('./lib.js');
       var res = await askGPT(input);
       outputDiv.innerHTML = res;
     });
