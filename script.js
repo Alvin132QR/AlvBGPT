@@ -1,7 +1,7 @@
 const text = document.getElementById("quest").value;
     const outputDiv = document.getElementById("output");
     const runButton = document.getElementById("run-button");
-    var par = document.createElementById("Par");
+    var par = document.createElement("p");
     runButton.addEventListener("click", async function() {
       var res = await askGPT(text);
       par.textContent = `result: ${res.result} `
